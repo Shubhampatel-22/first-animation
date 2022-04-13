@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.loader{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2a2a2a;
+}
+
+.circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #f3eded;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f3eded ;
+    animation: animate 3s  linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.circle2{
+    width: 200px;
+    height: 200px;
+    animation: animate 6s  linear infinite;
+}
+
+.circle3{
+    width: 100px;
+    height: 100px;
+    animation: animate 2s  linear infinite;
+}
+
+.circle4{
+    width: 30px;
+    height: 30px;
+    background: var(--clr);
+    border-radius: 50px;
+    box-shadow: 0 0 30px var(--clr), 0 0 60px var(--clr);
+
+}
+
+
+.circle::before{
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr) ;
+
+}
+
+.circle2::before{
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr) ;
+
+}
+
+.circle3::before{
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr) ;
+
+}
